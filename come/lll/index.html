@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<script src="js/common.js"></script>
+		<script src="js/jquery-2.2.0.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/rem.js"></script>
+	</head>
+	<body>
+		<header>
+			<h3>测试</h3>
+			<a class="iconfont right" onclick='startRecognize()'>&#xe604;</a>
+		</header>
+		<section>
+			<div class="swiper-container">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide"><img src="img/lunbo.png"></div>
+			    <div class="swiper-slide"><img src="img/lunbo.png"></div>
+			    <div class="swiper-slide"><img src="img/lunbo.png"></div>
+			  </div>
+			  <div>
+				<ul>
+					<li>
+						
+					</li>
+				</ul>			  	
+			  </div>
+			  <div class="swiper-pagination"></div> 
+			</div>
+		</section>
+		<footer>
+		<ul>
+			<li style="color: #5EA632;">
+				<i class="iconfont">&#xe60a;</i>
+				<b>首页</b>
+			</li>
+			<li>
+				<i class="iconfont">&#xe606;</i>
+				<b>成长足迹</b>
+			</li>
+			<li>
+				<i class="iconfont">&#xe608;</i>
+				<b>圈子</b>
+			</li>
+			<li>
+				<i class="iconfont">&#xe605;</i>
+				<b>发现</b>
+			</li>
+		</ul>
+	</footer>
+	</body>
+	<script type="text/javascript">
+		var mySwiper = new Swiper ('.swiper-container', { // Optional parameters 
+			pagination: '.swiper-pagination',
+	       // nextButton: '.swiper-button-next',
+	       // prevButton: '.swiper-button-prev',
+	        paginationClickable: true,
+	        spaceBetween: 30,
+	        centeredSlides: true,
+	        autoplay: 2500,
+	        autoplayDisableOnInteraction: false
+		})
+		window.onload = function(){
+		$('img').each(function() {
+			if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) { 
+				this.src = 'img/index/dog.jpg'; 
+			} 
+		});
+	}
+	</script>
+</html>
